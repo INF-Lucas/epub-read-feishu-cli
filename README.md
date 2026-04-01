@@ -8,6 +8,56 @@ It supports overview, targeted reading, continuous chunked reading, structured e
 
 This repository is the standalone Feishu CLI contest edition. The original general-purpose repository is kept separately and is not overwritten by this release.
 
+## Contest Checklist
+
+- Built on Feishu CLI for Drive intake and Docs publishing
+- Published as a standalone open-source GitHub repository
+- Includes runnable parsing, chunking, routing, and validation scripts
+- README contains clear install, usage, and output instructions
+- Keeps the original general-purpose repository untouched
+
+## Quick Demo
+
+1. Confirm Feishu CLI access:
+
+```bash
+lark-cli auth status
+```
+
+2. Download an EPUB from Lark Drive:
+
+```bash
+lark-cli drive +download --as bot --file-token boxbc_xxx --output ./book.epub
+```
+
+3. Parse the book:
+
+```bash
+python3 parse_epub.py ./book.epub
+```
+
+4. Generate a safe reading plan:
+
+```bash
+python3 task_router.py /path/to/book_dir --mode overview
+```
+
+5. Publish the result:
+
+```bash
+lark-cli docs +create --as bot --title "EPUB Reading Result" --markdown "<result-markdown>"
+```
+
+## Why This Skill Is Different
+
+`epub-read` does not load a long ebook into context by default. Instead, it:
+
+- routes work through explicit task modes
+- supports chunked long-book reading
+- keeps reading state for continue and jump flows
+- supports extraction and complex-content inspection
+- publishes output back to Feishu Docs
+
 ## Highlights
 
 - Feishu CLI intake: download `.epub` files from Lark Drive with `lark-cli drive +download`
@@ -79,6 +129,12 @@ lark-cli docs +create --title "EPUB Reading Result" --markdown "<result-markdown
 - `lxml`
 
 Before using the Feishu flow, make sure `lark-cli` is already configured with the required Lark Drive and Lark Docs permissions.
+
+If you need personal-resource access instead of bot access, run:
+
+```bash
+lark-cli auth login --domain docs --domain drive
+```
 
 Install dependencies:
 
@@ -171,6 +227,8 @@ Use the lightweight integration test first:
 python3 test_integration.py --epub /absolute/path/to/test.epub
 python3 test_integration.py --epub /absolute/path/to/test.epub --full
 ```
+
+This contest edition has also been smoke-tested with real Feishu CLI Drive upload/download flows before publication.
 
 ## Repository Layout
 
