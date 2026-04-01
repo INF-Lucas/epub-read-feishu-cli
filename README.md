@@ -8,15 +8,14 @@ It supports overview, targeted reading, continuous chunked reading, structured e
 
 This repository is the standalone Feishu CLI contest edition. The original general-purpose repository is kept separately and is not overwritten by this release.
 
-## Contest Checklist
+## Start Here
 
-- Built on Feishu CLI for Drive intake and Docs publishing
-- Published as a standalone open-source GitHub repository
-- Includes runnable parsing, chunking, routing, and validation scripts
-- README contains clear install, usage, and output instructions
-- Keeps the original general-purpose repository untouched
+- Download EPUB files from Lark Drive with Feishu CLI
+- Parse them into structured outputs you can inspect and reuse
+- Read safely by overview, targeted, full-read, extract, or complex-content mode
+- Publish notes and extraction results back to Feishu Docs
 
-## Quick Demo
+## First Run
 
 1. Confirm Feishu CLI access:
 
