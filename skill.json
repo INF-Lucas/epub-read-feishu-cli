@@ -1,0 +1,53 @@
+{
+  "name": "EPUB Read",
+  "slug": "epub-read",
+  "version": "2.0.0",
+  "title_en": "EPUB Read",
+  "description": "Use Feishu CLI to download EPUB files from Lark Drive, parse them safely, and publish overview or extraction results to Lark docs.",
+  "author": "Lucas",
+  "language": "en",
+  "category": "productivity",
+  "tags": [
+    "epub",
+    "reading",
+    "ebook",
+    "analysis",
+    "chunking",
+    "lark-cli",
+    "feishu",
+    "lark-drive"
+  ],
+  "positioning": "Treat EPUB reading as a Feishu CLI-driven, task-routed workflow instead of loading a whole book into context at once.",
+  "core_value": "Help users pull EPUB files from Feishu, read them safely in explicit modes, and publish the resulting notes back to Lark docs.",
+  "differentiation": [
+    "Uses Feishu CLI as the intake and publishing layer",
+    "Splits EPUB work into six explicit task modes",
+    "Prefers chunked reading over full-book context stuffing",
+    "Maintains reading state for continue, previous, next, and jump flows",
+    "Supports overview, extraction, complex-content inspection, and batch planning",
+    "Produces reusable artifacts that can be published into Lark docs"
+  ],
+  "input_types": [
+    "lark_drive_file",
+    "epub_file"
+  ],
+  "output_types": [
+    "overview_report",
+    "targeted_read_result",
+    "continuous_read_progress",
+    "structured_extraction",
+    "complex_content_report",
+    "lark_doc_publication"
+  ],
+  "scenarios": [
+    "download EPUB from Lark Drive",
+    "safe long-book overview",
+    "targeted chapter or chunk reading",
+    "continuous chunked full-book reading",
+    "structured extraction from EPUB",
+    "publish results to Lark docs"
+  ],
+  "entry": "SKILL.md",
+  "readme": "README.md",
+  "license": "MIT"
+}

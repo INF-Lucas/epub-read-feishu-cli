@@ -1,0 +1,4 @@
+interface:
+  display_name: "EPUB Read"
+  short_description: "Use Feishu CLI to read EPUB books from Lark Drive safely"
+  default_prompt: "Download this EPUB from Lark Drive with Feishu CLI, choose the right task mode, return a safe overview, targeted read, extraction result, or chunked reading plan, and publish the result to Lark docs when useful."
